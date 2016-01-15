@@ -1,0 +1,36 @@
+software:
+    path:     /
+    defaults: { _controller: "uniSistemasBundle:software:index" }
+
+software_show:
+    path:     /{id}/show
+    defaults: { _controller: "uniSistemasBundle:software:show" }
+
+
+software_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "uniSistemasBundle:software:edit" }
+
+software_update:
+    path:     /{id}/update
+    defaults: { _controller: "uniSistemasBundle:software:update" }
+    requirements: { _method: post|put }
+
+software_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "uniSistemasBundle:software:delete" }
+    requirements: { _method: post|delete }
+
+    
+software_buscar_maquina:
+    path:     /linkSoftware
+    defaults: { _controller: "uniSistemasBundle:software:buscarMaquina" }
+
+software_responder_maquina:
+    path:     /linkSoftwareRespuesta
+    defaults: { _controller: "uniSistemasBundle:software:responderMaquina" }
+    requirements: { _method: post|put }
+    
+uni_sistemas_software:
+    resource: "@uniSistemasBundle/Resources/config/routing/conSeguridad/softwareSeguridad.yml"
+    prefix:   /conSeguridad

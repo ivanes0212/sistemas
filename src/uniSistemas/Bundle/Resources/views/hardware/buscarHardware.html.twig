@@ -1,0 +1,30 @@
+{% extends 'uniSistemasBundle::layout.html.twig' %}
+
+{% block cuerpo %}
+  {# Ahora viene el javascript #}
+
+<script type="text/javascript">
+function submitform(obj) {
+document.forms["selectCats"].submit();
+}
+</script>
+
+{# Fin del javascript #}
+<br>Buscar categoria:
+<form id="selectCats" action="{{path('hardware_responder_hardware')}}" method="POST">
+    
+   <select name="nombre" onChange="submitform(this)">
+       <option value="Todas">Todas</option> 
+       
+       {% for c in cats %}
+            <option value={{c.nombre}}>{{c.nombre}}</option>
+        {% endfor %}
+    </select>  
+    
+    
+   
+    
+</form>
+      
+    
+{% endblock %}

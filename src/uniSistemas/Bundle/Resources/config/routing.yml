@@ -1,0 +1,24 @@
+uni_sistemas_software:
+    resource: "@uniSistemasBundle/Resources/config/routing/software.yml"
+    prefix:   /software
+
+uni_sistemas_maquinasvirtuales:
+    resource: "@uniSistemasBundle/Resources/config/routing/maquinasvirtuales.yml"
+    prefix:   /maquinasvirtuales
+
+uni_sistemas_hardware:
+    resource: "@uniSistemasBundle/Resources/config/routing/hardware.yml"
+    prefix:   /hardware
+    
+uni_sistemas_sistemas:
+    resource: "@uniSistemasBundle/Resources/config/routing/sistemas.yml"
+    prefix:   /sistemas
+    
+    
+uni_sistemas_hardware:
+    resource: "@uniSistemasBundle/Resources/config/routing/hardware.yml"
+    prefix:   /conSeguridad
+    
+uni_sistemas_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: uniSistemasBundle:Default:index }

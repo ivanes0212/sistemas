@@ -1,0 +1,27 @@
+{% extends 'uniSistemasBundle::layout.html.twig' %}
+
+{% block cuerpo %}
+    
+    <h1>Listado de categorias {{nomCat}}:</h1>
+ <tbody>
+        {% for entity in entities %}
+            
+            
+        <h2><a href="{{ path('hardware_show', { 'id': entity.id }) }}">{{ entity.nombre }}</a></h2>
+              
+        {{ entity.iPReal }}
+        <br>
+        {{ entity.memoria }}
+        <br>
+        {{entity.disco}}
+        <br>
+        {{entity.cPU}}
+                
+       
+                <br>
+                
+                
+                
+                
+        {% endfor %}
+{% endblock %}

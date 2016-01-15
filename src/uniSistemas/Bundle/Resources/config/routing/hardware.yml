@@ -1,0 +1,36 @@
+hardware:
+    path:     /
+    defaults: { _controller: "uniSistemasBundle:hardware:index" }
+
+hardware_show:
+    path:     /{id}/show
+    defaults: { _controller: "uniSistemasBundle:hardware:show" }
+
+
+hardware_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "uniSistemasBundle:hardware:edit" }
+
+hardware_update:
+    path:     /{id}/update
+    defaults: { _controller: "uniSistemasBundle:hardware:update" }
+    requirements: { _method: post|put }
+
+hardware_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "uniSistemasBundle:hardware:delete" }
+    requirements: { _method: post|delete }
+    
+hardware_buscar_hardware:
+    path:     /linkHardware
+    defaults: { _controller: "uniSistemasBundle:hardware:buscarHardware" }
+
+hardware_responder_hardware:
+    path:     /responderhardware
+    defaults: { _controller: "uniSistemasBundle:hardware:responderHardware" }
+    requirements: { _method: post|put }
+    
+uni_sistemas_hardware:
+    resource: "@uniSistemasBundle/Resources/config/routing/conSeguridad/hardwareSeguridad.yml"
+    prefix:   /conSeguridad
+

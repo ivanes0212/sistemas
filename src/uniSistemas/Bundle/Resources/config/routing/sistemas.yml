@@ -1,0 +1,39 @@
+sistemas:
+    path:     /
+    defaults: { _controller: "uniSistemasBundle:sistemas:index" }
+
+sistemas_show:
+    path:     /{id}/show
+    defaults: { _controller: "uniSistemasBundle:sistemas:show" }
+
+sistemas_new:
+    path:     /new
+    defaults: { _controller: "uniSistemasBundle:sistemas:new" }
+
+sistemas_create:
+    path:     /create
+    defaults: { _controller: "uniSistemasBundle:sistemas:create" }
+    requirements: { _method: post }
+
+sistemas_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "uniSistemasBundle:sistemas:edit" }
+
+sistemas_update:
+    path:     /{id}/update
+    defaults: { _controller: "uniSistemasBundle:sistemas:update" }
+    requirements: { _method: post|put }
+
+sistemas_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "uniSistemasBundle:sistemas:delete" }
+    requirements: { _method: post|delete }
+    
+sistemas_crear:
+    path:     /crear
+    defaults: { _controller: "uniSistemasBundle:sistemas:crear" }
+
+
+    
+ 
+    

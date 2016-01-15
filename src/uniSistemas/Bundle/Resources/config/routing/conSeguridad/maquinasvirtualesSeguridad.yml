@@ -1,0 +1,10 @@
+maquinasvirtuales_new:
+    path:     /new
+    defaults: { _controller: "uniSistemasBundle:maquinasvirtuales:new" }
+
+maquinasvirtuales_create:
+    path:     /create
+    defaults: { _controller: "uniSistemasBundle:maquinasvirtuales:create" }
+    requirements: { _method: post }
+
+

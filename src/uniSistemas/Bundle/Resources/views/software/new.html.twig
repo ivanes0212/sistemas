@@ -1,0 +1,16 @@
+{% extends 'uniSistemasBundle::layout.html.twig' %}
+
+
+{% block cuerpo %}
+    <h1>software creation</h1>
+
+    {{ form(form) }}
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('software') }}">
+            Back to the list
+        </a>
+    </li>
+</ul>
+{% endblock %}

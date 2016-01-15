@@ -1,0 +1,10 @@
+hardware_new:
+    path:     /new
+    defaults: { _controller: "uniSistemasBundle:hardware:new" }
+
+hardware_create:
+    path:     /create
+    defaults: { _controller: "uniSistemasBundle:hardware:create" }
+    requirements: { _method: post }
+    
+

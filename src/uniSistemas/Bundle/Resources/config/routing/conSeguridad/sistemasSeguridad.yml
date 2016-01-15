@@ -1,0 +1,3 @@
+sistemas_crear:
+    path:     /crear
+    defaults: { _controller: "uniSistemasBundle:sistemas:crear" }

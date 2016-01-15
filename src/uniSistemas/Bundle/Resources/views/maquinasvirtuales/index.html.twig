@@ -1,0 +1,48 @@
+{% extends 'uniSistemasBundle::layout.html.twig' %}
+
+
+{% block cuerpo %}
+    <h1>maquinasvirtuales list</h1>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Ipvirtual</th>
+                <th>Tareas</th>
+                <th>Descripcion</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('maquinasvirtuales_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.nombre }}</td>
+                <td>{{ entity.iPVirtual }}</td>
+                <td>{{ entity.tareas }}</td>
+                <td>{{ entity.descripcion }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('maquinasvirtuales_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('maquinasvirtuales_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('maquinasvirtuales_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

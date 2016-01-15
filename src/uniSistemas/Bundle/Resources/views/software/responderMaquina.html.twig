@@ -1,0 +1,14 @@
+{% extends 'uniSistemasBundle::layout.html.twig' %}
+
+
+{% block cuerpo %}
+    <h1>Listado de maquinas con este software -> {{tit}}:</h1>
+
+        {% for entity in tabla %}
+            
+            
+        <h2><a href="{{ path('software_show', { 'id': entity.id }) }}">{{ entity.nombre }}</a></h2>
+              
+        
+        {% endfor %}
+    {% endblock %}

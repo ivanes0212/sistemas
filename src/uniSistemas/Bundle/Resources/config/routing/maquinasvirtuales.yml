@@ -1,0 +1,29 @@
+maquinasvirtuales:
+    path:     /
+    defaults: { _controller: "uniSistemasBundle:maquinasvirtuales:index" }
+
+maquinasvirtuales_show:
+    path:     /{id}/show
+    defaults: { _controller: "uniSistemasBundle:maquinasvirtuales:show" }
+
+maquinasvirtuales_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "uniSistemasBundle:maquinasvirtuales:edit" }
+
+maquinasvirtuales_update:
+    path:     /{id}/update
+    defaults: { _controller: "uniSistemasBundle:maquinasvirtuales:update" }
+    requirements: { _method: post|put }
+
+maquinasvirtuales_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "uniSistemasBundle:maquinasvirtuales:delete" }
+    requirements: { _method: post|delete }
+    
+uni_sistemas_maquinasvirtuales:
+    resource: "@uniSistemasBundle/Resources/config/routing/conSeguridad/maquinasvirtualesSeguridad.yml"
+    prefix:   /conSeguridad
+    
+
+
+

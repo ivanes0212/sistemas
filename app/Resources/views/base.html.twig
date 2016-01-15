@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}
+            <link href="{{ asset ('bundles/unisistemas/css/fuente.css') }}" type="text/css" rel="stylesheet" />
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+        <div id="cabecera"
+        {% block cabecera %}
+            <h1><font color="#CBCBFD" size="30">SISTEMAS IVAN</font></h1>
+             <h3>
+                    
+                    <ul id="nav">
+        <li id="nav-1"><a href="{{ path('sistemas') }}">Inicio</a></li>
+        <li id="nav-1"><a href="{{ path('hardware') }}">Hardware</a></li>
+	<li id="nav-2"><a href="{{ path('software') }}">Software</a></li>
+	<li id="nav-3"><a href="{{ path('maquinasvirtuales') }}">Maquinas Virtuales</a></li>
+                    </ul>
+                </h3>
+        {% endblock %}
+        </div>
+        <div id="cuerpo">
+        {% block cuerpo %}
+        
+        {% endblock %}
+    </div>
+    <div id="pie">
+        {% block pie %}
+         <h6><font color="#CBCBFD">
+                    CONTACTO -> ivanesfc@hotmail.com
+                    <br>
+                    SITIO WEB -> ivan-sistemas.com
+                    <br>
+                    CENTRO -> uni Eibar-Ermua
+                    </font></h6>
+        {% endblock %}
+</div>
+    </body>
+</html>

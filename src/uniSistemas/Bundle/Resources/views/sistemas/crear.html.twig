@@ -1,0 +1,22 @@
+{% extends 'uniSistemasBundle::layout.html.twig' %}
+
+
+{% block cuerpo %}
+    <div id="texto">
+            <a href="{{ path('hardware_new') }}">
+                Añadir nuevo hardware
+                <br>
+                
+    
+            <a href="{{ path('software_new') }}">
+                Añadir nuevo software
+            </a>
+        
+                <br>
+   
+            <a href="{{ path('maquinasvirtuales_new') }}">
+                Añadir nueva maquina virtual
+            </a>
+                <br>
+                </div>
+    {% endblock %}
